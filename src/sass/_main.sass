@@ -5,6 +5,15 @@ $GBK: Gotham-Book, sans-serif
 $GBB: Gotham-Bold, sans-serif
 $GM: Gotham-Mediumm, sans-serif
 
+=m
+  @media only screen and (max-width: "767px")
+    @content
+=t
+  @media only screen and (max-width: "1139px")
+    @content
+=tm
+  @media only screen and (max-width: "991px")
+    @content
 *
 	box-sizing: border-box
 body
@@ -28,9 +37,13 @@ a
 	background: #3a3a3a
 	padding-top: 38px
 	padding-bottom: 358px
+	+m
+		padding-bottom: 240px
 	&__container
 		+clr
 		margin-bottom: 240px
+		+m
+			margin-bottom: 180px
 	&__logo
 		float: left
 		font-size: 0
@@ -44,6 +57,8 @@ a
 			margin-right: 80px
 			&:last-of-type
 				margin-right: 0
+			+m
+				margin-right: 20px
 		a
 			color: #fff
 			font-size: 14px
@@ -71,6 +86,11 @@ a
 		transform: translate(50%, -50%)
 		z-index: 0
 		opacity: 0.1
+		+m
+			right: 50%
+			width: 250px
+			height: 400px
+			top: 50%
 .title-lg
 	font-family: $GBK
 	font-size: 30px
@@ -79,6 +99,9 @@ a
 	letter-spacing: 10.5px
 	font-weight: 400
 	text-transform: uppercase
+	+m
+		font-size: 22px
+		text-align: center
 	span
 		color: #e1bb76
 .title-md
@@ -91,6 +114,8 @@ a
 	text-transform: uppercase
 	text-align: center
 	position: relative
+	+m
+		font-size: 20px
 	&:after
 		width: 65px
 		height: 1px
@@ -103,21 +128,18 @@ a
 .services
 	padding-top: 50px
 	margin-bottom: 558px
+	display: none
 	&__title
 		margin-bottom: 205px
 	&__list
 		font-size: 0
-		//text-align: center
 		display: none
 	&__item
 		display: inline-block
 		width: 20%
 		margin: 0 10%
-		// &:last-of-type
-			// margin-right: 0
 		p
 			color: #666666
-			font-family: $GM
 			font-size: 14px
 			font-weight: 400
 			line-height: 17px
@@ -126,6 +148,8 @@ a
 			line-height: 1
 .clients
 	margin-bottom: 174px
+	+m
+		margin-bottom: 50px
 	&__title
 		margin-bottom: 100px
 	&__list
@@ -134,6 +158,9 @@ a
 	&__item
 		display: inline-block
 		margin: 0 5.5%
+		+r(799)
+			width: 50%
+			margin: 0 0px 50px
 .map-block
 	&__title
 		margin-bottom: 60px
@@ -143,7 +170,6 @@ a
 		font-size: 23px
 		font-weight: 400
 		line-height: 34px
-		font-family: $GM
 		text-align: center
 		margin-bottom: 20px
 		line-height: 1
@@ -152,16 +178,22 @@ a
 		padding-bottom: 146px
 		background-size: contain
 		background-repeat: no-repeat
+		+t
+			background-position: 50% 50%
+		+tm
+			background-size: cover
+
 .form
-	width: 460px
+	max-width: 460px
 	height: 423px
 	box-shadow: 0 30px 54px rgba(0, 0, 0, 0.07)
 	background-color: #ffffff
 	margin: 0 auto
 	padding: 40px 55px 48px
+	+r(499)
+		padding: 20px
 	&__title
 		color: #444444
-		font-family: $GBK
 		font-size: 20px
 		font-weight: 400
 		text-align: center
@@ -172,14 +204,12 @@ a
 		color: #a1a1a1
 		font-size: 12px
 		font-weight: 400
-		font-family: $GM
 		line-height: 1
 		margin-bottom: 15px
 	&__input
 		display: block
 		width: 100%
 		color: #666666
-		font-family: $GM
 		font-size: 16px
 		font-weight: 400
 		line-height: 1
@@ -213,7 +243,6 @@ a
 		display: inline-block
 	&__copyright
 		color: #c5c5c5
-		font-family: $GM
 		font-size: 10px
 		font-weight: 400
 		letter-spacing: 0.83px
