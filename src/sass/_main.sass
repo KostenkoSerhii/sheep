@@ -25,12 +25,6 @@ body
 	margin-left: auto
 	margin-right: auto
 	position: relative
-//.font1
-//	font-family: $GBK
-//.font2
-//	font-family: $GBB
-//.font3
-//	font-family: $GM
 a
 	text-decoration: none
 .header
@@ -59,22 +53,36 @@ a
 				margin-right: 0
 			+m
 				margin-right: 20px
-		a
-			color: #fff
-			font-size: 14px
-			text-transform: uppercase
-			letter-spacing: 3px
-			position: relative
-			display: block
-			font-weight: 400
-			font-family: $GM
-			&:before
+	&__menu-link
+		color: #fff
+		font-size: 14px
+		text-transform: uppercase
+		letter-spacing: 3px
+		position: relative
+		display: block
+		font-weight: 400
+		font-family: $GM
+		&:before
+			position: absolute
+			content: ''
+			top: -7px
+			left: -7px
+			bottom: -7px
+			right: -7px
+		+rmin(1024)
+			&:after
 				position: absolute
-				content: ''
-				top: -7px
-				left: -7px
-				bottom: -7px
-				right: -7px
+				top: 0
+				left: 0
+				overflow: hidden
+				max-width: 0
+				border-bottom: 2px solid #e1bb76
+				color: #e1bb76
+				content: attr(data-hover)
+				transition: max-width 0.3s
+			&:hover:after, 
+			&:focus:after
+				max-width: 98%
 	&__title
 		max-width: 755px
 		margin-left: auto
@@ -125,6 +133,11 @@ a
 		bottom: -18px
 		position: absolute
 		content: ''
+		+rmin(1024)
+			transition: all .3s
+	+rmin(1024)
+		&:hover:after
+			width: 0px
 .services
 	padding-top: 50px
 	margin-bottom: 558px
@@ -231,6 +244,22 @@ a
 		display: block
 		width: 100%
 		margin-top: 57px
+		border: 1px solid #444444
+		transition: all .3s
+		position: relative
+		z-index: 1
+		+rmin(1024)
+			&:before
+				+coverdiv
+				content: ''
+				width: 0
+				background: #fff
+				transition: all .3s
+				z-index: -1
+			&:hover
+				color: #444444
+				&:before
+					width: 100%
 .footer
 	background-color: #444444
 	padding-top: 33px

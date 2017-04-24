@@ -2750,3 +2750,7 @@ function sayHello() {
 })();
 
 sayHello();
+$(document).ready(function () {
+
+    // ready
+});

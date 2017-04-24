@@ -5,3 +5,13 @@
 //=include lib/svgxuse.min.js
 
 sayHello();
+$(document).ready(function(){
+
+
+
+
+
+
+
+// ready
+});

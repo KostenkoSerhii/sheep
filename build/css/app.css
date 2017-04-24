@@ -186,7 +186,7 @@ a {
   margin-right: 0;
 }
 
-.header__menu a {
+.header__menu-link {
   color: #fff;
   font-size: 14px;
   text-transform: uppercase;
@@ -197,7 +197,7 @@ a {
   font-family: Gotham-Mediumm, sans-serif;
 }
 
-.header__menu a:before {
+.header__menu-link:before {
   position: absolute;
   content: '';
   top: -7px;
@@ -386,6 +386,10 @@ a {
   display: block;
   width: 100%;
   margin-top: 57px;
+  border: 1px solid #444444;
+  transition: all .3s;
+  position: relative;
+  z-index: 1;
 }
 
 .footer {
@@ -412,6 +416,47 @@ a {
   line-height: 3.4;
   text-transform: uppercase;
   margin-top: 6px;
+}
+
+@media only screen and (min-width: 1024px){
+  .header__menu-link:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    max-width: 0;
+    border-bottom: 2px solid #e1bb76;
+    color: #e1bb76;
+    content: attr(data-hover);
+    transition: max-width 0.3s;
+  }
+  .header__menu-link:hover:after, .header__menu-link:focus:after{
+    max-width: 98%;
+  }
+  .title-md:after{
+    transition: all .3s;
+  }
+  .title-md:hover:after{
+    width: 0px;
+  }
+  .form__btn:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    width: 0;
+    background: #fff;
+    transition: all .3s;
+    z-index: -1;
+  }
+  .form__btn:hover{
+    color: #444444;
+  }
+  .form__btn:hover:before{
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 1139px){
