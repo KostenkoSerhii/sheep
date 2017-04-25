@@ -506,8 +506,13 @@ a {
   margin-bottom: 19px;
 }
 
-.footer__logo-text {
-  display: inline-block;
+.footer__afterlogo-text {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: Gotham-Book, sans-serif;
+  letter-spacing: 4px;
+  font-size: 10px;
+  margin-top: 3px;
 }
 
 .footer__copyright {
