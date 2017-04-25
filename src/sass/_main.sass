@@ -90,7 +90,7 @@ a
 	&__bg-img
 		position: absolute
 		top: -4%
-		right: 35%
+		right: 36%
 		transform: translate(50%, -50%)
 		z-index: 0
 		opacity: 0.1
@@ -99,6 +99,28 @@ a
 			width: 250px
 			height: 400px
 			top: 50%
+	&__decoration
+		position: absolute
+		width: 153px
+		height: 173px
+		border: 3px solid #ffffff
+		opacity: 0.53
+		top: 54%
+		left: 65%
+		transform: translate(-50%, -50%)
+		z-index: 2
+		+tm
+			display: none
+		&:before
+			content: ''
+			position: absolute
+			width: 280px
+			height: 3px
+			background: linear-gradient(90deg, #e8c689,  #897e67 50% , #4d4c4a 85%, transparent)
+			left: -156px
+			bottom: 60px
+			z-index: 1
+		//+vcenter
 .title-lg
 	font-family: $GBK
 	font-size: 30px
@@ -110,6 +132,8 @@ a
 	+m
 		font-size: 22px
 		text-align: center
+		br
+			display: none
 	span
 		color: #e1bb76
 .title-md
@@ -139,26 +163,93 @@ a
 		&:hover:after
 			width: 0px
 .services
+	background: #f6f6f6
 	padding-top: 50px
-	margin-bottom: 558px
-	display: none
+	padding-bottom: 149px
+	margin-bottom: 101px
+	.container
+		overflow: hidden
 	&__title
-		margin-bottom: 205px
+		margin-bottom: 139px
 	&__list
 		font-size: 0
-		display: none
+		text-align: center
 	&__item
 		display: inline-block
-		width: 20%
-		margin: 0 10%
+		//width: 20%
+		//margin: 0 5%
+		position: relative
+		width: 255px
+		height: 170px
+		vertical-align: top
+		margin-right: 5%
+		+tm
+			display: block
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 20px
 		p
 			color: #666666
 			font-size: 14px
 			font-weight: 400
 			line-height: 17px
 			text-transform: uppercase
-			text-align: left
+			text-align: center
 			line-height: 1
+			padding-top: 70px
+			padding-left: 70px
+			//letter-spacing: 0.7px
+			+tm
+				padding-left: 0
+
+		span
+			opacity: 0.06
+			color: #000000
+			font-size: 104px
+			font-weight: 400
+			line-height: 1
+			text-transform: uppercase
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: -20px
+	&__item--left
+		box-shadow: 0 52px 65px rgba(0, 0, 0, 0.09)
+		background-color: #ffffff
+		&:before
+			content: ''
+			position: absolute
+			height: 3px
+			right: -50px
+			width: 92px
+			background: linear-gradient(90deg, #ebca90 , #f5f5f5)
+			top: 35px
+		&:after
+			position: absolute
+			content: ''
+			height: 2px
+			width: 100%
+			bottom: 0
+			left: 0
+			background: linear-gradient(90deg, #8f8f8f , #ffb019)
+	&__item--middle, &__item--last
+		span
+			+vcenter
+	&__item--middle
+		span
+			left: 54%
+			+tm
+				left: 50%
+	&__item--last
+		margin-right: 0
+		p
+			padding-left: 56px
+		span
+			left: 62%
+		+tm
+			margin-bottom: 0
+			span
+				left: 50%
 .clients
 	margin-bottom: 174px
 	+m
