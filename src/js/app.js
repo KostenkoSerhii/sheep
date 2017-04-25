@@ -30,8 +30,14 @@ $(document).ready(function(){
 		headerImg.css("opacity", "0.1");
 		headerDecorLine.css({"opacity": "1", "width":"270px"});
 	};
-	
-
+	AOS.init({
+		offset: 250,
+		delay: 100,
+		disable: function () {
+			var maxWidth = 1024;
+			return window.innerWidth < maxWidth;
+		}
+	});
 
 
 
