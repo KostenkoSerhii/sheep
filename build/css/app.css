@@ -100,14 +100,24 @@ html {
   content: "";
 }
 
-.icon-logo:before {
+.icon-logo-head:before {
   content: "";
+}
+
+.icon-logo:before {
+  content: "";
 }
 
 .icon-facebook {
   width: 0.53em;
   height: 1em;
   fill: #000;
+}
+
+.icon-logo-head {
+  width: 0.57em;
+  height: 1em;
+  fill: #63676d;
 }
 
 .icon-logo {

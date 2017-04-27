@@ -10,7 +10,8 @@
 }
 
 $icon-facebook: "\EA01";
-$icon-logo: "\EA02";
+$icon-logo-head: "\EA02";
+$icon-logo: "\EA03";
 
 
 %icon {
@@ -30,4 +31,5 @@ $icon-logo: "\EA02";
 }
 
 .icon-facebook:before { content: $icon-facebook; }
+.icon-logo-head:before { content: $icon-logo-head; }
 .icon-logo:before { content: $icon-logo; }
