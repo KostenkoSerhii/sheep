@@ -198,22 +198,7 @@ a {
 
 .header__logo svg {
   font-size: 154px;
-}
-
-.header__logo:nth-of-type(1) svg {
-  fill: #fff;
-}
-
-.header__logo:nth-of-type(2) svg {
-  fill: #64676D;
-}
-
-.header__logo:nth-of-type(3) svg {
   fill: #D1CEC6;
-}
-
-.header__logo:nth-of-type(4) svg {
-  fill: #fff;
 }
 
 .header__menu {
@@ -510,7 +495,7 @@ a {
 
 .footer__logo svg {
   font-size: 80px;
-  fill: #fff;
+  fill: #D1CEC6;
 }
 
 .footer__copyright {
