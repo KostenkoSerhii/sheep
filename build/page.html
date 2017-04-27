@@ -80,8 +80,8 @@
         <div class="container map-block__wrap" style="background-image: url('img/map.jpg');" data-aos="fade-up">
           <div class="form">
             <form action="https://formspree.io/clients@urbanwolfllc.com" method="POST"> <strong class="form__title">Contact form</strong>
-              <p class="form__placehold">Full Name</p> <input class="form__input" name="name" type="text">
-              <p class="form__placehold">Email</p> <input class="form__input" type="email" name="_replyto"> <button class="form__btn" type="submit">Send Now</button> </form>
+              <p class="form__placehold">Full Name</p> <input class="form__input" name="name" type="text" pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$" required>
+              <p class="form__placehold">Email</p> <input class="form__input" type="email" name="_replyto" pattern="/^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i" required> <button class="form__btn" type="submit">Send Now</button> </form>
           </div>
         </div>
       </div>

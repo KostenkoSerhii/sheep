@@ -72,16 +72,11 @@ title: Index page
 			method="POST">
 			<strong class="form__title">Contact form</strong>
 			<p class="form__placehold">Full Name</p>
-			<input class="form__input" name="name" type="text">
+			<input class="form__input" name="name" type="text" pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$" required	>
 			<p class="form__placehold">Email</p>
-			<input class="form__input" type="email" name="_replyto">
+			<input class="form__input" type="email" name="_replyto" pattern="/^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i" required	>
 			<button  class="form__btn" type="submit">Send Now</button>
 		</form>	
-
-
-
-
-
 	</div>
 </div>
 </div>
