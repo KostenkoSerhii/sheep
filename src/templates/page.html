@@ -68,16 +68,22 @@ title: Index page
 	</div>
 	<div class="container map-block__wrap" style="background-image: url('img/map.jpg');" data-aos="fade-up">
 		<div class="form">
-			<form>
-				<strong class="form__title">Contact form</strong>
-				<p class="form__placehold">Full Name</p>
-				<input class="form__input" name="name" type="text">
-				<p class="form__placehold">Email</p>
-				<input class="form__input" name="E-mail" type="text">
-				<button  class="form__btn" type="submit">Send Now</button>
-			</form>	
-		</div>
+			<form action="https://formspree.io/clients@urbanwolfllc.com"
+			method="POST">
+			<strong class="form__title">Contact form</strong>
+			<p class="form__placehold">Full Name</p>
+			<input class="form__input" name="name" type="text">
+			<p class="form__placehold">Email</p>
+			<input class="form__input" type="email" name="_replyto">
+			<button  class="form__btn" type="submit">Send Now</button>
+		</form>	
+
+
+
+
+
 	</div>
+</div>
 </div>
 <!--end map-block-->
 <footer class="footer">

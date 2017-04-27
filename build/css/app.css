@@ -191,11 +191,6 @@ a {
   display: block;
 }
 
-.header__logo img {
-  width: 97px;
-  height: 150px;
-}
-
 .header__logo svg {
   font-size: 154px;
   fill: #D1CEC6;
